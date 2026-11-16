@@ -3,242 +3,123 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#11110f" />
-    <meta
-      name="description"
-      content="Relojoaria Pinheiros — cuidado, precisão e tradição em relógios. Rua Fradique Coutinho, 612, Pinheiros, São Paulo."
-    />
+    <meta name="theme-color" content="#101411" />
+    <meta name="description" content="Relojoaria Pinheiros — manutenção, ajustes, baterias e cuidados para seu relógio em Pinheiros, São Paulo." />
+    <meta property="og:title" content="Relojoaria Pinheiros — O tempo, em boas mãos" />
+    <meta property="og:description" content="Precisão, cuidado e tradição para cada relógio." />
+    <meta property="og:image" content="assets/hero.jpg" />
+    <meta property="og:type" content="website" />
     <title>Relojoaria Pinheiros — O tempo, em boas mãos</title>
 
     <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <header class="site-header">
+      <div class="utility-bar">
+        <div class="wrap utility-bar__inner">
+          <span><span class="status-dot"></span> Atendimento em Pinheiros, São Paulo</span>
+          <a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria.">Fale pelo WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
       <div class="wrap site-header__inner">
-        <a class="brand" href="#top" aria-label="Relojoaria Pinheiros início">
-          <img class="mark" src="assets/logotipo.jpg" alt="Logo da Relojoaria Pinheiros" />
-          <span>
-            <strong>RELOJOARIA PINHEIROS</strong>
-            <small>PRECISÃO • CUIDADO • TEMPO</small>
-          </span>
+        <a class="brand" href="#top" aria-label="Relojoaria Pinheiros — início">
+          <img class="mark" src="assets/logotipo.jpg" alt="" />
+          <span><strong>RELOJOARIA PINHEIROS</strong><small>PRECISÃO <i>•</i> CUIDADO <i>•</i> TEMPO</small></span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
         <nav class="nav" id="site-nav" aria-label="Navegação principal">
-          <a href="#servicos">SERVIÇOS</a>
-          <a href="#essencia">NOSSA ESSÊNCIA</a>
-          <a href="#visite">LOCALIZAÇÃO</a>
-          <a class="nav-cta" href="https://www.instagram.com/relojoariapinheiros/">FALE CONOSCO ↗</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#essencia">Nossa essência</a>
+          <a href="#visite">Onde estamos</a>
+          <a class="nav-cta" href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria.">Falar com a equipe <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-label="Banner principal da loja">
-        <img class="hero-image" src="assets/hero.jpg" alt="" aria-hidden="true" />
-
-        <div class="wrap">
+    <main id="conteudo">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/hero.jpg" alt="Detalhes de um relógio clássico" />
+        <div class="hero-overlay"></div>
+        <div class="wrap hero-grid">
           <div class="hero-content reveal">
-            <div class="eyebrow">Pinheiros · São Paulo</div>
-
-            <h1>
-              O tempo,<br />
-              em <em>boas mãos.</em>
-            </h1>
-
-            <p>
-              Há peças que marcam horas. E há peças que guardam histórias. Um espaço dedicado ao cuidado e à precisão de cada relógio.
-            </p>
-
+            <div class="eyebrow">Relojoaria em Pinheiros <span></span> São Paulo</div>
+            <h1 id="hero-title">O tempo,<br /><em>em boas mãos.</em></h1>
+            <p>Manutenção, ajustes e cuidado especializado para relógios que acompanham a sua história.</p>
             <div class="actions">
-              <a class="btn primary" href="#servicos">Conheça nossos serviços ↗</a>
-              <a class="btn secondary" href="#visite">Visite a relojoaria</a>
-              <a class="btn primary whatsapp" href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria." target="_self">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z" />
-                  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8.2 7.8c.4-.5.9-.4 1.2 0l1 1.8c.2.4 0 .7-.4 1l-.5.5c.6 1.3 1.6 2.3 3 2.9l.5-.6c.3-.4.7-.5 1.1-.3l1.7.9c.4.2.5.7.2 1.1-.5.7-1.2 1-2 1-3.1-.2-6.7-3.7-6.9-6.8 0-.6.4-1.1 1.1-1.5Z" />
-                </svg>
-                WhatsApp ↗
-              </a>
+              <a class="btn primary" href="#servicos">Conheça nossos serviços <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#visite">Visite a relojoaria <span aria-hidden="true">↓</span></a>
             </div>
           </div>
+          <div class="hero-card reveal reveal-delay">
+            <span class="hero-card__number">01</span>
+            <span class="hero-card__label">Cuidado de precisão</span>
+            <p>Cada peça recebe uma avaliação atenta, respeitando suas características e sua história.</p>
+            <a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Gostaria%20de%20avaliar%20meu%20rel%C3%B3gio.">Solicitar uma avaliação <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-
         <div class="hero-note">UM CUIDADO QUE ATRAVESSA O TEMPO</div>
       </section>
 
-      <div class="strip">
-        <div class="wrap strip-inner">
-          <span><b>01</b> · Atenção aos detalhes</span>
-          <span><b>02</b> · Cuidado com cada peça</span>
-          <span><b>03</b> · Pinheiros, São Paulo</span>
+      <section class="proof-strip" aria-label="Diferenciais">
+        <div class="wrap proof-strip__inner">
+          <div><strong>01</strong><span>Atenção aos detalhes</span></div>
+          <div><strong>02</strong><span>Cuidado com cada peça</span></div>
+          <div><strong>03</strong><span>Atendimento em Pinheiros</span></div>
+          <div><strong>04</strong><span>Conversa transparente</span></div>
         </div>
-      </div>
+      </section>
 
-      <section id="servicos">
+      <section class="services-section" id="servicos" aria-labelledby="services-title">
         <div class="wrap">
-          <div class="section-head reveal">
+          <div class="section-heading reveal">
             <div class="eyebrow">O que fazemos</div>
-            <h2>
-              Precisão em cada<br />
-              <em style="color: var(--gold)">detalhe.</em>
-            </h2>
-            <p>
-              Seu relógio merece um olhar atento. Consulte a equipe sobre o serviço adequado para sua peça — cada avaliação é feita considerando suas características.
-            </p>
+            <div class="heading-row"><h2 id="services-title">Precisão em cada<br /><em>detalhe.</em></h2><p>Seu relógio merece um olhar atento. Consulte a equipe sobre o serviço adequado para sua peça.</p></div>
           </div>
-
-          <div class="services reveal-group">
-            <article class="service reveal">
-              <span class="num">01 / CUIDADO</span>
-              <h3>Manutenção &amp; ajustes</h3>
-              <p>Cuidados técnicos para ajudar a preservar o funcionamento e a longevidade do seu relógio.</p>
-              <div class="line"></div>
-            </article>
-
-            <article class="service reveal">
-              <span class="num">02 / PRECISÃO</span>
-              <h3>Bateria &amp; vedação</h3>
-              <p>Atendimento para troca de bateria e verificação de vedação. Consulte disponibilidade conforme o modelo.</p>
-              <div class="line"></div>
-            </article>
-
-            <article class="service reveal">
-              <span class="num">03 / ACABAMENTO</span>
-              <h3>Pulseiras &amp; detalhes</h3>
-              <p>Ajustes e opções para que seu relógio continue confortável e com a sua personalidade.</p>
-              <div class="line"></div>
-            </article>
+          <div class="services-grid">
+            <article class="service-card reveal"><div class="service-card__top"><span class="service-number">01</span><span class="service-tag">Cuidado</span></div><h3>Manutenção<br />&amp; ajustes</h3><p>Cuidados técnicos para ajudar a preservar o funcionamento e a longevidade do seu relógio.</p><a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20manuten%C3%A7%C3%A3o%20e%20ajustes.">Saiba mais <span aria-hidden="true">↗</span></a></article>
+            <article class="service-card service-card--featured reveal reveal-delay"><div class="service-card__top"><span class="service-number">02</span><span class="service-tag">Precisão</span></div><h3>Bateria<br />&amp; vedação</h3><p>Troca de bateria e verificação de vedação. Consulte a disponibilidade conforme o modelo.</p><a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20troca%20de%20bateria%20e%20veda%C3%A7%C3%A3o.">Consultar serviço <span aria-hidden="true">↗</span></a></article>
+            <article class="service-card reveal reveal-delay-2"><div class="service-card__top"><span class="service-number">03</span><span class="service-tag">Acabamento</span></div><h3>Pulseiras<br />&amp; detalhes</h3><p>Ajustes e opções para que seu relógio continue confortável e com a sua personalidade.</p><a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20pulseiras%20e%20ajustes.">Encontrar opções <span aria-hidden="true">↗</span></a></article>
           </div>
         </div>
       </section>
 
-      <section id="essencia">
-        <div class="wrap story">
-          <div class="story-visual reveal" role="img" aria-label="Detalhe de relógio clássico"></div>
-
+      <section class="story-section" id="essencia" aria-labelledby="story-title">
+        <div class="wrap story-grid">
+          <div class="story-visual reveal"><span>DESDE SEMPRE,<br /><em>COM CUIDADO.</em></span></div>
           <div class="story-copy reveal">
             <div class="eyebrow">Nossa essência</div>
-            <h2>
-              Mais do que horas.<br />
-              <em style="color: var(--gold)">Histórias.</em>
-            </h2>
-            <p>
-              Um relógio é feito de engenharia, design e memória. Na Relojoaria Pinheiros, cada peça merece atenção individual e uma conversa cuidadosa sobre o que ela precisa.
-            </p>
-            <p>
-              Estamos em Pinheiros, em São Paulo, para receber você e seu relógio.
-            </p>
-            <div class="quote">“O verdadeiro luxo está no cuidado.”</div>
+            <h2 id="story-title">Mais do que horas.<br /><em>Histórias.</em></h2>
+            <p>Um relógio é feito de engenharia, design e memória. Na Relojoaria Pinheiros, cada peça merece atenção individual e uma conversa cuidadosa sobre o que ela precisa.</p>
+            <p>Estamos em Pinheiros, em São Paulo, para receber você e seu relógio com calma, transparência e respeito.</p>
+            <div class="quote"><span>“</span><div>O verdadeiro luxo<br />está no cuidado.</div></div>
           </div>
         </div>
       </section>
 
-      <section class="visit" id="visite">
-        <div class="wrap">
-          <div class="visit-inner reveal">
-            <div class="eyebrow">Estamos em Pinheiros</div>
-            <h2>
-              Venha nos<br />
-              <em style="color: var(--gold)">visitar.</em>
-            </h2>
-            <div class="address">
-              Rua Fradique Coutinho, 612<br />
-              Pinheiros — São Paulo, SP<br />
-              05416-000
-            </div>
-            <a class="btn primary" target="_self" href="https://www.google.com/maps/place/R.+Fradique+Coutinho,+612+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05416-000/">
-              Abrir no Google Maps ↗
-            </a>
-          </div>
+      <section class="visit-section" id="visite" aria-labelledby="visit-title">
+        <div class="wrap visit-grid">
+          <div class="visit-copy reveal"><div class="eyebrow">Estamos em Pinheiros</div><h2 id="visit-title">Venha nos<br /><em>visitar.</em></h2><p>Traga seu relógio para uma conversa. Nossa equipe orienta você sobre o melhor cuidado para cada peça.</p><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/R.+Fradique+Coutinho,+612+-+Pinheiros,+S%C3%A3o+Paulo+-+SP,+05416-000/">Abrir no Google Maps <span aria-hidden="true">↗</span></a></div>
+          <div class="address-card reveal reveal-delay"><span class="address-card__label">Endereço</span><strong>Rua Fradique Coutinho, 612</strong><span>Pinheiros — São Paulo, SP<br />05416-000</span><div class="address-card__line"></div><a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Estou%20em%20Pinheiros%20e%20gostaria%20de%20falar%20com%20a%20equipe.">Fale antes de vir <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <div class="footer-social reveal">
-          <h2 class="footer-social-heading">Siga em nossas redes sociais</h2>
-
-          <div class="social-links">
-            <a class="social-button" href="link-social.html" target="_self" aria-label="YouTube" title="YouTube">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
-                <path d="m10 9 5 3-5 3z" fill="currentColor" />
-              </svg>
-            </a>
-            <a class="social-button" href="link-social.html" target="_self" aria-label="TikTok" title="TikTok">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M19.6 3.2a5.8 5.8 0 0 1-3.4-3.1h-3.6v14.2a2.8 2.8 0 1 1-2.8-2.8c.4 0 .8.1 1.1.2V8a7 7 0 1 0 5.5 6.8V7.5a9.3 9.3 0 0 0 5.4 1.7V5.6a5.8 5.8 0 0 1-2.2-.5Z" />
-              </svg>
-            </a>
-            <a class="social-button" href="https://www.instagram.com/relojoariapinheiros/" target="_self" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
-                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
-                <circle cx="18" cy="6.5" r="1" fill="currentColor" />
-              </svg>
-            </a>
-            <a class="social-button" href="link-social.html" target="_self" aria-label="Facebook" title="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.6 1.6-1.6h1.7V3.5c-.3 0-1.4-.1-2.6-.1-2.7 0-4.5 1.6-4.5 4.6v2H7v3.1h2.7v8z" />
-              </svg>
-            </a>
-            <a class="social-button" href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria." target="_self" aria-label="WhatsApp" title="WhatsApp">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z" />
-                <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8.2 7.8c.4-.5.9-.4 1.2 0l1 1.8c.2.4 0 .7-.4 1l-.5.5c.6 1.3 1.6 2.3 3 2.9l.5-.6c.3-.4.7-.5 1.1-.3l1.7.9c.4.2.5.7.2 1.1-.5.7-1.2 1-2 1-3.1-.2-6.7-3.7-6.9-6.8 0-.6.4-1.1 1.1-1.5Z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="foot reveal">
-          <a class="brand" href="#top" aria-label="Voltar ao topo">
-            <img class="mark" src="assets/logotipo.jpg" alt="Logo da Relojoaria Pinheiros" />
-            <span>
-              <strong>RELOJOARIA PINHEIROS</strong>
-              <small>PRECISÃO • CUIDADO • TEMPO</small>
-            </span>
-          </a>
-
-          <span>© <span class="js-current-year">2026</span> RELOJOARIA PINHEIROS · SÃO PAULO</span>
-          <a href="#top">VOLTAR AO TOPO ↑</a>
-        </div>
+        <div class="footer-top"><div><div class="eyebrow">Acompanhe</div><h2>O tempo continua.<br /><em>Vamos conversar.</em></h2></div><div class="social-links" aria-label="Redes sociais"><a href="https://www.instagram.com/relojoariapinheiros/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram <span aria-hidden="true">↗</span></a><a href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a></div></div>
+        <div class="footer-bottom"><a class="brand" href="#top" aria-label="Voltar ao topo"><img class="mark" src="assets/logotipo.jpg" alt="" /><span><strong>RELOJOARIA PINHEIROS</strong><small>PRECISÃO <i>•</i> CUIDADO <i>•</i> TEMPO</small></span></a><span>© <span class="js-current-year">2026</span> Relojoaria Pinheiros · São Paulo</span><a href="#top">Voltar ao topo ↑</a></div>
       </div>
     </footer>
 
-    <aside class="theo-widget" aria-label="Atendimento pelo WhatsApp">
-      <div class="theo-bubble">
-        <button class="theo-close" type="button" aria-label="Esconder agente de atendimento" title="Esconder atendimento">×</button>
-        <span class="theo-label">Atendimento · Theo</span>
-        <p>Olá, sou o Theo. Como posso lhe ajudar?</p>
-      </div>
-
-      <img class="theo-avatar" src="assets/theo.png" alt="Theo, atendente da Relojoaria Pinheiros" />
-
-      <a class="theo-chat-btn" href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria." target="_self">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z" />
-          <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8.2 7.8c.4-.5.9-.4 1.2 0l1 1.8c.2.4 0 .7-.4 1l-.5.5c.6 1.3 1.6 2.3 3 2.9l.5-.6c.3-.4.7-.5 1.1-.3l1.7.9c.4.2.5.7.2 1.1-.5.7-1.2 1-2 1-3.1-.2-6.7-3.7-6.9-6.8 0-.6.4-1.1 1.1-1.5Z" />
-        </svg>
-        Falar com o Theo
-      </a>
-    </aside>
-
+    <aside class="theo-widget" aria-label="Atendimento pelo WhatsApp"><div class="theo-bubble"><button class="theo-close" type="button" aria-label="Esconder agente de atendimento" title="Esconder atendimento">×</button><span class="theo-label">Atendimento · Theo</span><p>Olá, sou o Theo. Como posso lhe ajudar?</p></div><img class="theo-avatar" src="assets/theo.png" alt="Theo, atendente da Relojoaria Pinheiros" /><a class="theo-chat-btn" href="https://wa.me/5511952146521?text=Ol%C3%A1!%20Tudo%20bem%3F%20Gostaria%20de%20conhecer%20os%20modelos%20e%20servi%C3%A7os%20da%20relojoaria."><span aria-hidden="true">◌</span> Falar com o Theo</a></aside>
     <script src="script.js" defer></script>
   </body>
 </html>

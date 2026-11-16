@@ -3,12 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
-  const revealItems = document.querySelectorAll('.reveal');
   const theoWidget = document.querySelector('.theo-widget');
   const theoClose = document.querySelector('.theo-close');
+  const revealItems = document.querySelectorAll('.reveal');
 
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
+  if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+  if (header) {
+    const updateHeaderState = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+    updateHeaderState();
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
   }
 
   if (theoWidget && theoClose) {
@@ -17,52 +21,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (header) {
-    const updateHeaderState = () => {
-      header.classList.toggle('is-scrolled', window.scrollY > 24);
-    };
-
-    updateHeaderState();
-    window.addEventListener('scroll', updateHeaderState, { passive: true });
-  }
+  const closeMenu = () => {
+    if (!nav || !navToggle) return;
+    nav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Abrir menu');
+  };
 
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     });
-
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target) && !navToggle.contains(event.target)) closeMenu();
     });
-
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 760) {
-        nav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
+      if (window.innerWidth > 820) closeMenu();
     });
   }
 
-  if (revealItems.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px',
-      }
-    );
-
+  if (revealItems.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 });
