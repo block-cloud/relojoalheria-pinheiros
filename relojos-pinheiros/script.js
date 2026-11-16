@@ -4,9 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
   const revealItems = document.querySelectorAll('.reveal');
+  const theoWidget = document.querySelector('.theo-widget');
+  const theoClose = document.querySelector('.theo-close');
 
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
+  }
+
+  if (theoWidget && theoClose) {
+    theoClose.addEventListener('click', () => {
+      theoWidget.hidden = true;
+    });
   }
 
   if (header) {

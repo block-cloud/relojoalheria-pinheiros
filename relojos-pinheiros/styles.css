@@ -591,6 +591,35 @@ section {
   pointer-events: auto;
 }
 
+.theo-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.theo-close:hover {
+  border-color: #bca47770;
+  color: var(--cream);
+}
+
+.theo-close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 .theo-bubble::after {
   content: "";
   position: absolute;
